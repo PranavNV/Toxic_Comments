@@ -22,8 +22,6 @@ train['comment_text'].fillna("unknown", inplace=True)
 test['comment_text'].fillna("unknown", inplace=True)
 
 
-
-#Yet to look into the logic of these below codes  in detail, Havent executed them to understand it completely. Took them up from the notebooks. You can try it to check the validit and understanding
 word_vectorizer = TfidfVectorizer(
     sublinear_tf=True,
     strip_accents='unicode',
@@ -47,6 +45,7 @@ char_vectorizer.fit(all_comment)
 train_char_features = char_vectorizer.transform(train)
 test_char_features = char_vectorizer.transform(test)
 
+#Yet to look into the logic of these below codes  in detail, Havent executed them to understand it completely. Took them up from the notebooks. You can try it to check the validit and understanding
 train_features = hstack([train_char_features, train_word_features])
 test_features = hstack([test_char_features, test_word_features])
 
