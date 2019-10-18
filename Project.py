@@ -38,4 +38,5 @@ tokenizer.fit_on_texts(list(comment_train))
 list_tokenized_train = tokenizer.texts_to_sequences(comment_train)
 list_tokenized_test = tokenizer.texts_to_sequences(comment_test)
 
+#Works till here.
 #YET TO TRY FURTHER PACKAGES OF KERAS. ON HOLD TILL Project_Trial is Done
